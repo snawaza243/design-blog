@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     <!--######### Writing Callback Function #############-->
+     <script type="text/javascript">
+        //----------------------------Defaults
+        var ListBlogLink = window.location.hostname;
+        var ListCount = 5;
+        var TitleCount = 70;
+        var ListLabel = " ";
+        //----------------------------Function Start
+        function mbtlist(json) {
+            document.write('<ul class="mbtlist">');
+            for (var i = 0; i < ListCount; i++) {
+
+                //-----------------------------Variables Declared
+                var listing = ListUrl = ListTitle = "";
+                //----------------------------- Title URL
+                for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+                    if (json.feed.entry[i].link[j].rel == 'alternate') {
+                        break;
+                    }
+                }
+                ListUrl = "'" + json.feed.entry[i].link[j].href + "'";
+                //----------------------------------- Title Stirng
+                if (json.feed.entry[i].title != null) {
+                    ListTitle = json.feed.entry[i].title.$t.substr(0, TitleCount);
+                }
+                //----------------------------------- Printing List
+                var listing = "<div class='postListDivTime'><b><a class='postListDivCSS' href=" +
+                    ListUrl +
+                    "target='_blank'>" +[i+1]+". "+
+                    ListTitle +
+                    "</a></b></div>";
+                document.write(listing);
+            }
+            document.write("</ul>");
+        }
+    </script>
+    <!--######### Invoking the Callback Function #############-->
+    <script>
+        ListBlogLink = "https://www.indiantechnoera.in";
+        ListCount = 999;
+        TitleCount = 999;
+  ListLabel =  "ReactJS Practical";
+        document.write("<script src='" + ListBlogLink + "/feeds/posts/default/-/" + ListLabel +
+            "?alt=json-in-script&callback=mbtlist'></" + "script>");
+    </script>
+    <!--######### Styles for Look #############-->
+ 
+    <style>
+.postListDivTime{transition: 0.6s;}
+.postListDivCSS { border-radius: 5px; border-bottom: 2px solid black; border-top: 2px solid rgb(255, 255, 255); color: black; margin: 10px; padding: 10px; align-items: center; display: flex; transition: 0.6s; background-color: aliceblue; font-family: sans-serif; line-height: 24px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+
+.postListDivCSS:hover { border-radius: 25px; border-bottom: 2px solid black; border-top: 2px solid rgb(255, 255, 255); color: white !important; padding-left: 30px; transition: 0.4s; background-color: #08a96e; box-shadow: 0 0 5px #08a96e; }
+
+.postListDivCSS a {color: rgb(0, 0, 0) !important; text-decoration: none; transition: 0.6s;}
+
+/* postList Post List css */
+.postListDivCSS a:hover { color: white !important; text-decoration: underline; text-shadow: 0 0 2px rgb(0, 0, 0); transition: 0.3s;}
+
+.postListDivCSS a:active {color: rgb(0, 0, 0);}
+    
+</style>
+
+   
+</body >
+</html >

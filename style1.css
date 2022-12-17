@@ -1,0 +1,40 @@
+.htmlcontent {
+    border-radius: 35px;
+    border-bottom: 2px solid black;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    height: 45px;
+    align-items: center;
+    display: flex;
+    transition: 0.3s;
+    padding-top: 10px 10px;
+    padding-left: 10px;
+
+}
+
+.htmlcontent:hover {
+    border-radius: 35px;
+    border-bottom: 2px solid black;
+    color: white;
+    margin: 5px;
+    padding-left: 20px;
+    transition: 0.3s;
+    background-color: #f33611;
+
+}
+
+.htmlcontent:active {
+    color: rgb(0, 0, 0);
+}
+
+.contenthyper {
+    font-family: times;
+    font-size: large;
+}
+
+
+/* 
+<div class="htmlcontent"><h3>25.&nbsp;
+<a href="#"
+target="_parent">Edit Command</a></h3></div><hr class="hrcontent"/> */

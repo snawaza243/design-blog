@@ -1,0 +1,68 @@
+ <!-- Google Translate Button -->
+
+        .skiptranslate {display: flex;}
+
+        #google_translate_element {}
+
+        .goog-te-gadget *{color: #fff;}
+
+        #targetLanguage .goog-te-combo {
+            width: 100px;       height: 100px;
+            border-radius: 50%; color: #fff;
+            background-color: #08a96e;
+
+        }
+
+        .goog-te-combo {
+            width: 125px;
+            height: 35px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: #08a96e;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
+
+        }
+
+        .goog-te-combo option {
+            width: 60px;
+        }
+
+
+        .goog-logo-link {
+            display: none;
+
+        }
+
+        .fa-language {
+            padding-left: 40px;
+            display: absolute;
+            z-index: 5;
+        }
+
+        .gtscroll  {
+  display:flex;
+            border-bottom: 3px dotted black;
+  justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+ <span class='gtscroll'>
+   <span>
+     <i aria-hidden='true' class='fa fa-language fa-2x'/>
+     <span id='google_translate_element'>
+       <marquee behavior='scroling' scrollamount='6' width='100%'>
+                            <span style='color:#f36611'>इस प&#2375;ज क&#2379; अपन&#2368; पस&#2306;द&#2368;द&#2366; भ&#2366;ष&#2366; म&#2375;&#2306; अन&#2369;व&#2366;द कर&#2375;&#2306; | </span>
+                            <span style='color:#0076e8 '>Translate this page in your preferred language. |</span>
+                            <span style='color:#08a96e'>.اس صفحے کو اپنی پسند کی زبان میں ترجمہ کریں کو
+                                کو
+                            </span>
+       </marquee>
+     </span>
+   </span>
+</span>
+<br/>
